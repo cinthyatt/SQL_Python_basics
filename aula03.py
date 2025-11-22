@@ -20,5 +20,21 @@ for linha in consulta:
 
 conexao.commit()'''
 
-consulta = cursor.execute("SELECT * FROM minha_tabela WHERE Nome='Odemir'").fetchall()
-print(consulta)
+'''consulta = cursor.execute("SELECT * FROM minha_tabela WHERE Nome<>'Odemir'and'Lucas'").fetchall()
+print(consulta)'''
+
+'''consulta = cursor.execute('SELECT * FROM minha_tabela WHERE idade BETWEEN 15 and 20')
+for linha in consulta:
+    print(linha)'''
+
+'''consulta = cursor.execute("SELECT * FROM minha_tabela WHERE Nome LIKE 'A%'").fetchall()
+for linha in consulta:
+    print(linha)'''
+
+'''consulta = cursor.execute("SELECT * FROM minha_tabela WHERE Nome LIKE 'a%a'").fetchall()
+for linha in consulta:
+    print(linha)'''
+
+consulta = cursor.execute("SELECT * FROM minha_tabela WHERE Idade IN (15, 20, 30)").fetchall()
+for linha in consulta:
+    print(linha)
