@@ -48,11 +48,17 @@ conexao.commit()'''
 #conexao.commit()
 
 #consulta = cursor.execute("DELETE FROM minha_tabela WHERE Nome = 'Preenchido' ")
+#conexao.commit()
 
 #consulta = cursor.execute("SELECT COUNT (Idade) FROM minha_tabela WHERE Idade = 14")
 
 #consulta = cursor.execute("SELECT AVG (Idade) FROM minha_tabela")
 
 #consulta = cursor.execute("SELECT * FROM minha_tabela")
+
+#Para consultar o nome das colunas
+#consulta = cursor.execute("PRAGMA table_info(minha_tabela);").fetchall()
+
+consulta = cursor.execute('SELECT * FROM minha_tabela')
 for linha in consulta:
     print(linha)
