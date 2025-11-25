@@ -35,6 +35,24 @@ for linha in consulta:
 for linha in consulta:
     print(linha)'''
 
-consulta = cursor.execute("SELECT * FROM minha_tabela WHERE Idade IN (15, 20, 30)").fetchall()
+#consulta = cursor.execute("SELECT * FROM minha_tabela WHERE Idade IN (15, 20, 30)").fetchall()
+
+#consulta = cursor.execute("SELECT * FROM minha_tabela ORDER BY Idade DESC, Nome DESC").fetchall()
+
+'''consulta = cursor.execute("INSERT INTO minha_tabela VALUES ('ABC', null, 30)")
+consulta = cursor.execute("INSERT INTO minha_tabela VALUES ('ABC', null, null)")
+consulta = cursor.execute("SELECT * FROM minha_tabela")
+conexao.commit()'''
+
+#consulta = cursor.execute("UPDATE minha_tabela SET Nome = 'Preenchido' WHERE Nome IS NULL")
+#conexao.commit()
+
+#consulta = cursor.execute("DELETE FROM minha_tabela WHERE Nome = 'Preenchido' ")
+
+#consulta = cursor.execute("SELECT COUNT (Idade) FROM minha_tabela WHERE Idade = 14")
+
+#consulta = cursor.execute("SELECT AVG (Idade) FROM minha_tabela")
+
+#consulta = cursor.execute("SELECT * FROM minha_tabela")
 for linha in consulta:
     print(linha)
